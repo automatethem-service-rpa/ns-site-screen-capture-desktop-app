@@ -1,1 +1,161 @@
-도움말
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            //width: 600px; /* 고정된 창 너비 */
+            //height: 600px; /* 고정된 창 높이 */
+        }
+        #container {
+            display: flex;
+            height: 100%;
+        }
+        #sidebar {
+            width: 210px;
+            background-color: #f8f9fa;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        #content {
+            //width: 390px;
+            padding: 10px;
+            background-color: #ffffff;
+            box-sizing: border-box;
+            align-self: flex-start; /* 위쪽 정렬 */
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-warning text-center py-2">
+        <h2 class="fs-5 fw-semibold">도움말</h2>
+    </div>
+
+    <div id="container">
+
+        <!-- 컨텐츠 영역 -->
+        <div id="content">
+            <div class="container">
+
+                <!-- 오토벨 섹션 -->
+                <div class="mb-4">
+                    <h5 class="fw-bold">오토벨</h5>
+                    <div>
+                        <a href="https://auction.autobell.co.kr/info/programDown.do" target="_blank" class="d-block mb-2 text-primary">오토벨 스마트옥션 다운로드</a>
+                        스마트옥션 - 출품리스트<br/>
+                        <a href="https://autobell.co.kr/" target="_blank" class="d-block">https://autobell.co.kr/</a><br/>
+                        <a href="https://autobell.co.kr/autoAuction/auctionInfo?seq=1" target="_blank" class="d-block">https://autobell.co.kr/autoAuction/auctionInfo?seq=1</a>
+                    </div>
+                </div>
+
+                <!-- 케이카옥션 섹션 -->
+                <div class="mb-4">
+                    <h5 class="fw-bold">케이카옥션</h5>
+                    <div>
+                        로그인 - 위클리옥션 - A레인 - 출품확정현황<br/>
+                        <a href="https://www.kcarauction.com/" target="_blank" class="d-block">https://www.kcarauction.com/</a>
+                        <a href="https://www.kcarauction.com/kar/auction/weekly_auction/colAuction.do?PAGE_TYPE=wCfm#1" target="_blank" class="d-block">https://www.kcarauction.com/kcar/auction/weekly_auction/colAuction.do?PAGE_TYPE=wCfm#1</a>
+                    </div>
+                </div>
+
+                <!-- 롯데오토옥션 섹션 -->
+                <div class="mb-4">
+                    <h5 class="fw-bold">롯데오토옥션</h5>
+                    <div>
+                        로그인 - 롯데오토옥션회원 - 출품리스트<br/>
+                        <a href="https://www.lotteautoauction.net/" target="_blank" class="d-block">https://www.lotteautoauction.net/</a>
+                    </div>
+                </div>
+
+                <!-- AJ셀카옥션 섹션 -->
+                <div class="mb-4">
+                    <h5 class="fw-bold">AJ셀카옥션</h5>
+                    <div>
+                        로그인 - 내 차 잘사기 - 출품 리스트<br/>
+                        <a href="https://www.sellcarauction.co.kr/" target="_blank" class="d-block">https://www.sellcarauction.co.kr/</a>
+                    </div>
+                </div>
+
+                <!-- 단축키 섹션 -->
+                <div class="mb-4">
+                    <h5 class="fw-bold">단축키</h5>
+                    <div>중지 단축키: Alt + Q (맥 Option + Q)</div>
+                </div>
+                
+                <!-- 캡처 이미지 저장 디렉토리 섹션 -->
+                <div class="mb-4">
+                    <h5 class="fw-bold">캡처 이미지 저장 디렉토리</h5>
+                    <div>다운로드 폴더내 outputs 폴더</div>
+                </div>
+                
+                <!-- 팝업 허용 섹션 -->
+                <div class="mb-4">
+                    <h5 class="fw-bold">팝업 허용</h5>
+                    <div>
+                        <a href="https://ko.freeonlineutility.com/blog/browser-popup-allowance/" target="_blank">브라우저 팝업 허용</a>
+                    </div>
+                </div>
+
+                <!-- 다운로드 허용 섹션 -->
+                <div class="mb-4">
+                    <h5 class="fw-bold">다운로드 허용</h5>
+                    <div>
+                        <a href="https://ko.freeonlineutility.com/blog/browser-forced-download/" target="_blank" class="d-block">브라우저 파일 다운로드 저장 위치 확인 창 보여주지 않고 바로 다운로드</a>
+                    </div>
+                </div>
+                
+                <!-- 추가 데스크톱 앱 -->
+                <div class="mb-4">
+                    <h5 class="fw-bold">추가 데스크톱 앱</h5>
+                    <div>
+                    <a href="https://ko.freeonlineutility.com/blog/browser-save-to-jpg/" target="_blank" class="d-block">브라우저에서 사진 파일 다운로드시 jpeg, tfif 가 아닌 .jpg 로 저장 레지스트리 설정</a> (상세 캡처에서 자동차 사진 tfif 확장자로 저장되는 현상 교정)
+                    </div>
+                </div>
+                
+                <!-- 추가 크롬확장 앱 -->
+                <div class="mb-4">
+                    <h5 class="fw-bold">추가 크롬확장 앱</h5>
+                    <div>
+                    <a href="https://chromewebstore.google.com/detail/free-online-utility/elokmjdpkjdknmfipengglgnibjmdkpe" target="_blank" class="d-block">무료 온라인 유틸리티 브라우저 확장 - 팝업 메뉴 - 브라우저 확장 - 레퍼러 복사</a>
+                    <a href="https://blog.naver.com/automatethem/223552090411" target="_blank" class="d-block">Alert Control - 경고창 차단</a>
+                    <a href="https://ko.freeonlineutility.com/app/window-resizer-be/" target="_blank" class="d-block">창 크기 조정기</a>
+                    </div>
+                </div>
+
+                <!-- 확장 에러시 리로드 하기 -->
+                <div class="mb-4">
+                    <h5 class="fw-bold">브라우저 확장 에러시 리로드 하기</h5>
+                    <div>
+                    <a href="https://ko.freeonlineutility.com/blog/browser-extension-error-reload/" target="_blank" class="d-block">브라우저 확장 에러시 리로드 하기</a>
+                    </div>
+                </div>
+                
+                <!-- 크롬 확장 지원 브라우저 다운로드 섹션 -->
+                <div class="mb-4">
+                    <h5 class="fw-bold">브라우저 확장 지원 브라우저</h5>
+                    <div>
+                        <a href="https://ko.freeonlineutility.com/blog/browser-extension-supported-browser/" target="_blank" class="d-block text-primary">브라우저 확장 지원 브라우저</a>
+                        <a href="https://ko.freeonlineutility.com/blog/browser-extension-developer-mode-install/" target="_blank" class="d-block text-primary">개발자 모드에서 브라우저 확장 설치</a>
+                    </div>
+                </div>
+
+                <!-- 자동차 경매 사이트 화면 캡처 앱 다운로드 주소 섹션 -->
+                <div class="mb-4">
+                    <h5 class="fw-bold">자동차 경매 사이트 화면 캡처 앱 다운로드 주소</h5>
+                    <div>
+                        <a href="https://www.dropbox.com" target="_blank" class="d-block text-primary">드랍박스</a>
+                        <a href="https://drive.google.com/" target="_blank" class="d-block text-primary">구글 드라이브</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

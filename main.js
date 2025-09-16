@@ -1,6 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('node:path')
-const Work = require('./work/work');
+const Work = require('./work/kakotalk-send-message/work');
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -30,6 +30,13 @@ app.whenReady().then(() => {
       const response = await work.stop();
       work = null;
       return response;
+    }
+  })
+
+  ipcMain.handle('openExternal', async (event, url) => {
+    if (work) {
+      shell.openExternal(url); // 외부 링크 열기
+      return null;
     }
   })
 
