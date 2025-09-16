@@ -10,7 +10,7 @@ contextBridge.exposeInMainWorld('api', {
     return ipcRenderer.invoke('stop');
   },
 
-  stop: (url) => { 
+  openExternal: (url) => { 
     return ipcRenderer.invoke('openExternal', url);
   }
 })
