@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron')
+const { app, BrowserWindow, ipcMain, shell } = require('electron')
 const path = require('node:path')
 //const Work = require('./work/kakotalk-send-message/work');
 
@@ -12,6 +12,7 @@ function createWindow() {
   })
 
   win.loadFile('index.html')
+  //win.loadFile('html/help/index.html')
 }
 
 app.whenReady().then(() => {
@@ -34,6 +35,7 @@ app.whenReady().then(() => {
   })
 
   ipcMain.handle('openExternal', async (event, url) => {
+    //const url = "https://www.naver.com/";
     await shell.openExternal(url);  // 기본 브라우저에서 열기
   })
 
