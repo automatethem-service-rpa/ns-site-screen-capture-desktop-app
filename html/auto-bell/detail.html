@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            //width: 600px; /* 고정된 창 너비 */
+            //height: 600px; /* 고정된 창 높이 */
+        }
+        #container {
+            display: flex;
+            //height: 100%;
+        }
+        #sidebar {
+            //width: 210px;
+            background-color: #f8f9fa;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        #content {
+            //width: 390px;
+            padding: 10px;
+            background-color: #ffffff;
+            box-sizing: border-box;
+            align-self: flex-start; /* 위쪽 정렬 */
+        }
+    </style>
+</head>
+<body>
+    <div id="menu-container"></div>
+
+
+    <div class="bg-warning text-center py-2">
+        <h2 class="fs-5 fw-semibold">오토벨 상세 화면 캡처</h2>
+    </div>
+
+    
+    <div id="container">
+
+        <!-- 컨텐츠 영역 -->
+        <div id="content">
+            <div class="container">
+                <!-- 토큰 URL 입력 -->
+                <div class="mb-3">
+                    <label for="detailUrl" class="form-label">토큰 URL 입력</label>
+                    <input type="text" class="form-control" id="detailUrl" placeholder="토큰 URL 입력">
+                </div>
+
+                <!-- 날짜 선택 -->
+                <div class="mb-3">
+                    <label for="detailAuctionDate" class="form-label">날짜 선택</label>
+                    <select id="detailAuctionDate" class="form-select">
+                        <option selected>날짜를 선택하세요</option>
+                    </select>
+                </div>
+
+                <!-- 출품번호 입력 -->
+                <div class="mb-3">
+                    <label for="entryNumbers" class="form-label">출품번호 입력</label>
+                    <input type="text" class="form-control" id="entryNumbers" placeholder="출품번호 입력 예) 0001, 0002">
+                </div>
+
+                <!-- 기아 섹션 -->
+                <div class="accordion mb-3" id="kiaAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingKia">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseKia" aria-expanded="false" aria-controls="collapseKia">
+                                기아 정보 입력
+                            </button>
+                        </h2>
+                        <div id="collapseKia" class="accordion-collapse collapse" aria-labelledby="headingKia" data-bs-parent="#kiaAccordion">
+                            <div class="accordion-body">
+                                <!-- 기아 아이디 입력 -->
+                                <div class="mb-3">
+                                    <label for="kiaId" class="form-label">기아 아이디 입력</label>
+                                    <input type="text" class="form-control" id="kiaId" value="yarza@nate.com">
+                                </div>
+
+                                <!-- 기아 암호 입력 -->
+                                <div class="mb-3">
+                                    <label for="kiaPassword" class="form-label">기아 암호 입력</label>
+                                    <input type="password" class="form-control" id="kiaPassword" value="nsfeel3@">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 쌍용 섹션 -->
+                <div class="accordion mb-3" id="ssangyongAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSsangyong">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSsangyong" aria-expanded="false" aria-controls="collapseSsangyong">
+                                쌍용 정보 입력
+                            </button>
+                        </h2>
+                        <div id="collapseSsangyong" class="accordion-collapse collapse" aria-labelledby="headingSsangyong" data-bs-parent="#ssangyongAccordion">
+                            <div class="accordion-body">
+                                <!-- 쌍용 아이디 입력 -->
+                                <div class="mb-3">
+                                    <label for="ssangyoungId" class="form-label">쌍용 아이디 입력</label>
+                                    <input type="text" class="form-control" id="ssangyoungId" value="yarza82">
+                                </div>
+
+                                <!-- 쌍용 암호 입력 -->
+                                <div class="mb-3">
+                                    <label for="ssangyoungPassword" class="form-label">쌍용 암호 입력</label>
+                                    <input type="password" class="form-control" id="ssangyoungPassword" value="nsfeel3@">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 시작 및 중지 버튼 -->
+                <div class="d-flex justify-content-center gap-2">
+                    <button id="startAutobellDetailWorkButton" class="btn btn-primary text-white fw-bold">시작</button>
+                    <button id="stopAutobellDetailWorkButton" class="btn btn-danger text-white fw-bold">중지</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../menu-sub.js"></script>
+    <script src="./detail.js"></script>
+</body>
+</html>

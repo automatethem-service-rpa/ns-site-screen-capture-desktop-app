@@ -2,8 +2,9 @@ const { app, BrowserWindow, ipcMain, shell } = require('electron')
 const path = require('node:path')
 //const Work = require('./work/kakotalk-send-message/work');
 
+let win = null;
 function createWindow() {
-  const win = new BrowserWindow({
+  win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
@@ -32,6 +33,10 @@ app.whenReady().then(() => {
       work = null;
       return response;
     }
+  })
+
+  ipcMain.handle('navigate', async (event, url) => {
+    win.webContents.send('navigate', url);
   })
 
   ipcMain.handle('openExternal', async (event, url) => {

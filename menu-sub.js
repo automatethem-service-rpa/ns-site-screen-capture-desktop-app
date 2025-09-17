@@ -52,6 +52,7 @@ fetch('menu.html')
 
 */
 // 메뉴 불러오기
+
 function loadMenu(path) {
   return fetch(path)
     .then(res => {
@@ -82,29 +83,8 @@ function loadMenu(path) {
     });
 }
 
-/*
-function selectCurrentPageOption() {
-  const select = document.getElementById('menu');
-  if (!select) 
-    return;
+//loadMenu('../../menu-sub.html');
 
-  // 현재 페이지 파일명 가져오기
-  const currentPage = location.pathname.split('/').pop();
-
-  Array.from(select.options).forEach(option => {
-    // option.value의 끝부분과 현재 페이지 비교
-    if (option.value.endsWith(currentPage)) {
-      option.selected = true;
-    }
-  });
-}
-
-loadMenu('./menu.html')
-  .then(() => {
-    // 메뉴 로드 후 호출
-    selectCurrentPageOption();
-  });
-*/
 function selectCurrentPageOption(matchPaths = []) {
   const select = document.getElementById('menu');
   if (!select) return;
@@ -122,8 +102,6 @@ function selectCurrentPageOption(matchPaths = []) {
 }
 
 // 메뉴 로드 후 호출
-loadMenu('./menu.html').then(() => {
+loadMenu('../../menu-sub.html').then(() => {
   //selectCurrentPageOption(["home", 'band-upload', 'help', 'index.html']);
 });
-
-
