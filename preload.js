@@ -10,6 +10,12 @@ contextBridge.exposeInMainWorld('api', {
     return ipcRenderer.invoke('stop');
   },
 
+  navigate: (url) => { 
+    return ipcRenderer.invoke('navigate', url);
+  },
+
+  onNavigate: (callback) => ipcRenderer.on('navigate', (event, page) => callback(page)),
+
   openExternal: (url) => { 
     return ipcRenderer.invoke('openExternal', url);
   }
